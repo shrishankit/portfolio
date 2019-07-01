@@ -8,6 +8,8 @@ import '../node_modules/bulma-extensions/dist/css/bulma-extensions.min.css'
 
 import '../assets/CSS/style.scss'
 
+import '../assets/CSS/quate.css'
+
 import '../node_modules/bulma/css/bulma.css'
 
 import _6f6c098b from '../layouts/default.vue'

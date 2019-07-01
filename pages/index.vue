@@ -5,6 +5,35 @@
         <!-- Main container -->
         <mainheader></mainheader>
       </div>
+      <div class="columns" style="width:100%">
+        <div class="column is-paddingless" style="height:95vh">
+          <div class="center" style="height:100%">
+          <blockquote class="quote-box" >
+              <p class="quotation-mark">“</p>
+              <p
+                class="quote-text"
+              >Don't believe anything that you read on the internet, it may be fake.</p>
+              <span class="author"><i>Lorem ipsum</i></span>
+              
+               
+              <!-- <div class="blog-post-actions">
+                <p class="blog-post-bottom pull-left"></p>
+                <p class="blog-post-bottom pull-right">
+                  <span class="badge quote-badge">896</span> ❤
+                </p>
+              </div> -->
+            </blockquote>
+            </div>
+        </div>
+        <div class="column is-paddingless"  style="height:95vh">
+          <div class="centerright" style="height:100%">
+          <div style="padding-right:10%;width:max-content">
+              <p class="myfonts isbig">Shrish Ankit</p>
+              <h2 class="myfonts subtitle">Full Stack Developer</h2>
+            </div>
+            </div>
+        </div>
+      </div>
       <!-- <section class="superlightpadding">
        <article class="media">
       <figure class="image is-128x128 sticky">
@@ -27,12 +56,7 @@
       
     </article>
       </section>-->
-      <div class="center" style="height:90%">
-        <div>
-          <h1 class="myfonts title">Shrish Ankit</h1>
-          <h2 class="subtitle">Full Stack Developer</h2>
-        </div>
-      </div>
+      
     </div>
     <!-- <div class="is-divider-vertical" data-content="OR"></div> -->
     <div class>Under Construction .....</div>
@@ -67,6 +91,7 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Allerta+Stencil|Caveat|Caveat+Brush|Courgette|Neucha&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Baloo|Carter+One|Codystar|Fredoka+One|Monoton|Press+Start+2P|Righteous&display=swap");
 .container {
   margin: 0 auto;
@@ -75,24 +100,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
 }
 
 .links {

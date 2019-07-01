@@ -1,4 +1,7 @@
 /* WRITE YOUR CSS HERE */
+html {
+  font-size: 16px;
+}
 .sigPad {
   border: 1px solid rgba(136, 135, 135, 0.788);
 }
@@ -488,23 +491,43 @@ fieldset {
 }
 .myfonts {
   font-family: "Righteous", cursive;
-  font-family: 'Press Start 2P', cursive;
-  font-family: 'Carter One', cursive;
-  font-family: 'Baloo', cursive;
-  font-family: 'Codystar', cursive;
-  font-family: 'Monoton', cursive;
-  font-family: 'Fredoka One', cursive;
+  font-family: "Press Start 2P", cursive;
+  font-family: "Carter One", cursive;
+  font-family: "Baloo", cursive;
+  font-family: "Codystar", cursive;
+  font-family: "Monoton", cursive;
+  font-family: "Fredoka One", cursive;
+  font-family: "Courgette", cursive;
+  font-family: "Caveat", cursive;
+  font-family: "Neucha", cursive;
+  font-family: "Allerta Stencil", sans-serif;
+  font-family: "Caveat Brush", cursive;
+  color: #fff !important;
+  font-size: 5rem;
 }
-.homepage{
+.homepage {
   height: 100vh;
   background-image: url(../Image/pawel-czerwinski-fPN1w7bIuNU-unsplash.jpg);
   background-repeat: no-repeat;
-  background-size: auto auto;
-  
+  background-size: 150% 150%;
 }
-.newheader{
+.newheader {
   background-color: rgba(10, 10, 10, 0.1) !important;
 }
-.altheader{
-  background-color: rgba(0,0,0, 0.8) !important;
+.altheader {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+.isbig{
+  font-size: 5rem;
+}
+@media only screen and (max-width: 600px) {
+
+  .homepage {
+   
+    background-repeat: no-repeat;
+    background-size: auto auto;
+  }
+  .myfonts{
+    font-size: 2rem ;
+  }
 }

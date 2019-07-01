@@ -27,7 +27,8 @@ export default {
   css: [
     './assets/CSS/main.css',
     './node_modules/bulma-extensions/dist/css/bulma-extensions.min.css',
-    './assets/CSS/style.scss'
+    './assets/CSS/style.scss',
+    './assets/CSS/quate.css'
   ],
   /*
    ** Plugins to load before mounting the App
