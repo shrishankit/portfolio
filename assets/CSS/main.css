@@ -1,10 +1,4 @@
 /* WRITE YOUR CSS HERE */
-html {
-  font-size: 16px;
-}
-.sigPad {
-  border: 1px solid rgba(136, 135, 135, 0.788);
-}
 .center {
   display: flex;
   justify-content: center;
@@ -54,23 +48,9 @@ html {
   justify-items: flex-end;
 }
 
-.bignoty {
-  text-align: center;
-  font-size: 32px;
-}
 
-.header {
-  padding: 10px;
-  background-color: #363636;
-}
 
-.buttonfullwidth {
-  width: -webkit-fill-available;
-}
-
-.custom {
-  margin-top: 40px;
-}
+  
 
 .viewbox {
   min-height: 100vh;
@@ -134,273 +114,26 @@ html {
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
-
-  overflow: auto;
+  display: none;
+  overflow: hidden;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  /* display: none; */
+  overflow: scroll;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(218, 191, 191, 0);
+  /* background: rgba(218, 191, 191, 0); */
+  background: transparent !important;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #888;
+
   border-radius: 7px;
-}
-
-#contentarea {
-  padding-left: 265px;
-  height: calc(100vh - 60px);
-}
-#contentarea.collapsed {
-  transition-timing-function: ease;
-  padding-left: 50px;
-  /* transition: width .3s; */
-}
-
-/* .container {
-    margin: 0 auto;
-    max-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  } */
-
-/* .title {
-    font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    display: block;
-    font-weight: 300;
-    font-size: 100px;
-    color: #35495e;
-    letter-spacing: 1px;
-    line-height: 3.125 !important;
-  } */
-.dashtitle {
-  color: #363636;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.125;
-  margin-bottom: 10px;
-}
-.dashsubtitle {
-  color: #4a4a4a;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.25;
-  padding: 0px;
-}
-
-/* .subtitle {
-    font-weight: 300;
-    font-size: 42px;
-    color: #526488;
-    word-spacing: 5px;
-    padding-bottom: 15px;
-  } */
-
-.links {
-  padding-top: 15px;
-}
-.maincontent {
-  /* background-color:lightsteelblue; */
-  /* height:-webkit-fill-available; */
-  height: inherit;
-  overflow: auto;
-}
-/* .topcontainer{ */
-/* background-color: beige; */
-/* vertical-align: -webkit-baseline-middle; */
-/* } */
-.wholeform {
-  /* background-color: lightpink; */
-  /* height:-webkit-fill-available; */
-  overflow: scroll;
-  height: 100%;
-  box-sizing: border-box;
-}
-.dashcontainer {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.panel-block {
-  max-height: 330px;
-  overflow: scroll;
-  display: block !important;
-}
-.animationContent {
-  max-width: fit-content !important;
-  box-sizing: border-box !important;
-}
-.sec1empsign {
-  box-sizing: border-box !important;
-}
-.forautosuggestdocs {
-  margin: 5px;
-  height: 22px;
-}
-
-#autosuggest__input {
-  outline: none;
-  position: relative;
-  display: block;
-  font-family: monospace;
-  font-size: 20px;
-  border: 1px solid #616161;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
-#autosuggest__input.autosuggest__input-open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.autosuggest__results-container {
-  position: relative;
-  width: 100%;
-}
-
-.autosuggest__results {
-  font-weight: 300;
-  margin: 0;
-  position: absolute;
-  z-index: 10000001;
-  width: 100%;
-  border: 1px solid #e0e0e0;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background: white;
-  padding: 0px;
-  overflow: scroll;
-  max-height: 200px;
-  padding-left: 10px;
-  padding-top: 6px;
-}
-
-.autosuggest__results ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.autosuggest__results .autosuggest__results_item {
-  cursor: pointer;
-  padding: 15px;
-}
-
-#autosuggest ul:nth-child(1) > .autosuggest__results_title {
-  border-top: none;
-}
-
-.autosuggest__results .autosuggest__results_title {
-  color: gray;
-  font-size: 11px;
-  margin-left: 0;
-  padding: 15px 13px 5px;
-  border-top: 1px solid lightgray;
-}
-
-.autosuggest__results .autosuggest__results_item:active,
-.autosuggest__results .autosuggest__results_item:hover,
-.autosuggest__results .autosuggest__results_item:focus,
-.autosuggest__results
-  .autosuggest__results_item.autosuggest__results_item-highlighted {
-  background-color: #ddd;
-}
-
-.levelstyle {
-  /* border: 1px solid grey; */
-  border-radius: 7px;
-  padding: 3px;
-  background-color: #2dd1b157;
-}
-.codeGreen {
-  background: #222;
-  color: #bada55;
-}
-.codeYellow {
-  background: #222;
-  color: yellow;
-}
-.paramargin {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.uploadaddbutton {
-  margin-bottom: 24px;
-}
-fieldset {
-  border: none;
-}
-.customdashboarddisplay {
-  height: 300px;
-  background: lightgray;
-}
-.custompanalstyle {
-  background: lavender;
-  border: 1px solid lightgray;
-}
-.customhrfield .lable {
-  font-size: inherit;
-  width: max-content;
-}
-.customshadowbox {
-  /* border: 1px solid gray; */
-  border-radius: 7px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
-}
-.normalpara {
-  white-space: normal;
-  text-align: justify;
-}
-.sidebox {
-  background-color: lavender;
-  border-radius: 7px;
-}
-.navbar-item.is-mega {
-  position: static;
-}
-.navbar-item.is-mega .is-mega-menu-title {
-  margin-bottom: 0;
-  padding: 0.375rem 1rem;
-}
-.tabs {
-  margin-bottom: -1px !important;
-  position: relative;
-}
-.tab-content {
-  padding: 60px;
-  /* top: 197px; */
-  color: #000;
-  background-color: white;
-}
-.tab-pane {
-  display: none;
-}
-.tab-pane.is-active {
-  display: block;
-  /* width: 50%; */
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.is-active {
-  display: initial;
-}
-
-.cent {
-  display: block;
-  margin: 10px auto;
-  padding: 5px;
-  border: 1px solid #ccc;
 }
 
 .video {
@@ -507,7 +240,8 @@ fieldset {
 }
 .homepage {
   height: 100vh;
-  background-image: url(../Image/pawel-czerwinski-fPN1w7bIuNU-unsplash.jpg);
+  /* background-image: url(../Image/pawel-czerwinski-fPN1w7bIuNU-unsplash.jpg); */
+  background-color: antiquewhite;
   background-repeat: no-repeat;
   background-size: 150% 150%;
 }
@@ -517,17 +251,15 @@ fieldset {
 .altheader {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
-.isbig{
+.isbig {
   font-size: 5rem;
 }
 @media only screen and (max-width: 600px) {
-
   .homepage {
-   
     background-repeat: no-repeat;
     background-size: auto auto;
   }
-  .myfonts{
-    font-size: 2rem ;
+  .myfonts {
+    font-size: 2rem;
   }
 }

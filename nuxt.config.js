@@ -28,21 +28,23 @@ export default {
     './assets/CSS/main.css',
     './node_modules/bulma-extensions/dist/css/bulma-extensions.min.css',
     './assets/CSS/style.scss',
-    './assets/CSS/quate.css'
-  ],
+    './assets/CSS/quate.css',
+    ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+  ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
+    ['@nuxtjs/bulma'],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    
     
   ],
   /*

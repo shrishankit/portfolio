@@ -8,11 +8,10 @@ blockquote{
 
 .quote-box{
   
-  padding-left: 21px;
-  padding-right: 20px;
+  padding: 30px;
   overflow: hidden;
-  margin-top: -50px;
-  padding-top: -100px;
+
+ 
   border-radius: 17px;
   background-color: #34363663;
   margin-top: 25px;
@@ -37,7 +36,7 @@ blockquote{
 .quote-text{
   
   font-size: 19px;
-  margin-top: -65px;
+  /* margin-top: -65px; */
 }
 
 blockquote span.author {
