@@ -38,7 +38,10 @@ export default {
      var refreshId = window.setInterval(function() {
         //  console.log("Total Words",totalWordCount);
         if (letterCount === 0 && waiting === false) {
+
           waiting = true;
+              console.log("Waiting- if 1",waiting);
+
           target.innerHTML = words[0].substring(0, letterCount);
 
           wordCount = wordCount + 1;
@@ -56,25 +59,32 @@ export default {
             console.log("Letter Count",letterCount);
             
             waiting = false;
+                console.log("Waiting- settimeout",waiting);
+
           }, 1000);
 
         } else if (letterCount === words[0].length + 1 && waiting === false) {
           waiting = true;
+              console.log("Waiting-else if",waiting);
 
           window.setTimeout(function() {
             x = -1;
             letterCount += x;
             waiting = false;
+            console.log("Waiting-else if in",waiting);
+
           }, 1000);
 
         } else if (waiting === false) {
-
+          console.log("Waiting-else if 2",waiting);
+          
           target.innerHTML = words[0].substring(0, letterCount);
           letterCount += x;
+          // if(words[])
 
         }
 
-        if(wordCount === totalWordCount){
+        if(wordCount === totalWordCount ){
           clearInterval(refreshId);
         }
       }, 120);
@@ -91,6 +101,7 @@ export default {
       }, 400);
 
       
+    
     }
   }
 };

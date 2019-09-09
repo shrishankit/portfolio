@@ -26,6 +26,7 @@ export default {
    */
   css: [
     './assets/CSS/main.css',
+    './assets/CSS/animation.css',
     './node_modules/bulma-extensions/dist/css/bulma-extensions.min.css',
     './assets/CSS/style.scss',
     './assets/CSS/quate.css',
@@ -44,6 +45,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    ["nuxt-buefy", { css: true, materialDesignIcons: true }]
     
     
   ],

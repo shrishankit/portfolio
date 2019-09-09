@@ -1,4 +1,28 @@
 /* WRITE YOUR CSS HERE */
+:root {
+  --primary-color: #302AE6;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+  --banner-color: #fff;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+  --banner-color: #2a2929;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+
 .center {
   display: flex;
   justify-content: center;

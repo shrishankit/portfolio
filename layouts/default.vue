@@ -1,8 +1,17 @@
 <template>
   <div>
+    <!-- <mainheader></mainheader> -->
     <nuxt />
   </div>
 </template>
+<script>
+import mainheader from "../components/header";
+export default {
+   components: {
+      mainheader
+  },
+}
+</script>
 
 <style>
 html {

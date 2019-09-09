@@ -1,260 +1,185 @@
 <template>
-    <div class="">
-        <nav :class="[{newheader: scrollPosition < 10, altheader: scrollPosition > 10},{navbar:true}]">
-        <div class="navbar-brand">
-           
-
-          <div class="navbar-burger burger" @click="displayMenu" data-target="navMenubd-example">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+  <div class>
+    <nav
+      style="z-index: 99999999;"
+      :class="[{newheader: scrollPosition < 10, altheader: scrollPosition > 10},{navbar:true}]"
+    >
+      <div class="navbar-brand">
+        <div class="navbar-burger burger" @click="displayMenu" data-target="navMenubd-example">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </div>
 
-        <div id="navMenubd-example" class="navbar-menu">
-          <div class="navbar-start">
-            <div class="navbar-item has-dropdown is-hoverable">
-              <!-- <a class="navbar-link is-active" href="/documentation/overview/start/">Docs</a> -->
-              <!-- next div is for the dropdown content of DOcs -->
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="/documentation/overview/start/">Overview</a>
-                <a
-                  class="navbar-item"
-                  href="http://bulma.io/documentation/modifiers/syntax/"
-                >Modifiers</a>
-                <a class="navbar-item" href="http://bulma.io/documentation/columns/basics/">Columns</a>
-                <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">Layout</a>
-                <a class="navbar-item" href="http://bulma.io/documentation/form/general/">Form</a>
-                <a class="navbar-item" href="http://bulma.io/documentation/elements/box/">Elements</a>
+      <div id="navMenubd-example" class="navbar-menu">
+        <div class="navbar-start">
+          <!-- <div class="navbar-item has-dropdown is-hoverable">
+            
+            <div class="navbar-dropdown">
+              
 
-                <a
-                  class="navbar-item is-active"
-                  href="http://bulma.io/documentation/components/breadcrumb/"
-                >Components</a>
+              <hr class="navbar-divider" />
+              <div class="navbar-item">
+                <div>
+                  <p class="is-size-6-desktop">
+                    <strong class="has-text-info">0.5.1</strong>
+                  </p>
 
-                <hr class="navbar-divider" />
-                <div class="navbar-item">
-                  <div>
-                    <p class="is-size-6-desktop">
-                      <strong class="has-text-info">0.5.1</strong>
-                    </p>
-
-                    <small>
-                      <a class="bd-view-all-versions" href="/versions">View all versions</a>
-                    </small>
-                  </div>
+                  <small>
+                    <a class="bd-view-all-versions" href="/versions">View all versions</a>
+                  </small>
                 </div>
               </div>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable is-mega">
-              <!-- <div class="navbar-link">Blog</div> -->
-              <div id="blogDropdown" class="navbar-dropdown" data-style="width: 18rem;">
-                <div class="is-fluid">
-                  <div class="columns">
-                    <div class="column">
-                      <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
-                      <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                        <div class="navbar-content">
-                          <p>
-                            <small class="has-text-info">03 Aug 2017</small>
-                          </p>
-                          <p>New feature: list of tags</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                        <div class="navbar-content">
-                          <p>
-                            <small class="has-text-info">03 Aug 2017</small>
-                          </p>
-                          <p>New feature: list of tags</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                        <div class="navbar-content">
-                          <p>
-                            <small class="has-text-info">03 Aug 2017</small>
-                          </p>
-                          <p>New feature: list of tags</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="column">
-                      <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
-                      <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                        <div class="navbar-content">
-                          <p>
-                            <small class="has-text-info">03 Aug 2017</small>
-                          </p>
-                          <p>New feature: list of tags</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item" href="/documentation/overview/start/">Overview</a>
-                      <a
-                        class="navbar-item"
-                        href="http://bulma.io/documentation/modifiers/syntax/"
-                      >Modifiers</a>
-                      <a
-                        class="navbar-item"
-                        href="http://bulma.io/documentation/columns/basics/"
-                      >Columns</a>
-                    </div>
-                    <div class="column">
-                      <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
-                      <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                        <div class="navbar-content">
-                          <p>
-                            <small class="has-text-info">03 Aug 2017</small>
-                          </p>
-                          <p>New feature: list of tags</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                        <div class="navbar-content">
-                          <p>
-                            <small class="has-text-info">03 Aug 2017</small>
-                          </p>
-                          <p>New feature: list of tags</p>
-                        </div>
-                      </a>
-                      <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                        <div class="navbar-content">
-                          <p>
-                            <small class="has-text-info">03 Aug 2017</small>
-                          </p>
-                          <p>New feature: list of tags</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="column">
-                      <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
-                      <a class="navbar-item" href="/documentation/overview/start/">Overview</a>
-                      <a
-                        class="navbar-item"
-                        href="http://bulma.io/documentation/modifiers/syntax/"
-                      >Modifiers</a>
-                      <a
-                        class="navbar-item"
-                        href="http://bulma.io/documentation/columns/basics/"
-                      >Columns</a>
-                      <a
-                        class="navbar-item"
-                        href="http://bulma.io/documentation/layout/container/"
-                      >Layout</a>
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="navbar-divider" />
-                <div class="navbar-item">
-                  <div class="navbar-content">
-                    <div class="level is-mobile">
-                      <div class="level-left">
-                        <div class="level-item">
-                          <strong>Stay up to date!</strong>
-                        </div>
+          </div>-->
+          <!-- <div class="navbar-item has-dropdown is-hoverable is-mega">
+            
+            <div id="blogDropdown" class="navbar-dropdown" data-style="width: 18rem;">
+              <div class="is-fluid">
+                <div class="columns">
+                  <div class="column">
+                    <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
+                    <a class="navbar-item" href="/2017/08/03/list-of-tags/">
+                      <div class="navbar-content">
+                        <p>
+                          <small class="has-text-info">03 Aug 2017</small>
+                        </p>
+                        <p>New feature: list of tags</p>
                       </div>
-                      <div class="level-right">
-                        <div class="level-item">
-                          <a class="button bd-is-rss is-small" href="http://bulma.io/atom.xml">
-                            <span class="icon is-small">
-                              <i class="fa fa-rss"></i>
-                            </span>
-                            <span>Subscribe</span>
-                          </a>
-                        </div>
+                    </a>
+                    <a class="navbar-item" href="/2017/08/03/list-of-tags/">
+                      <div class="navbar-content">
+                        <p>
+                          <small class="has-text-info">03 Aug 2017</small>
+                        </p>
+                        <p>New feature: list of tags</p>
                       </div>
-                    </div>
+                    </a>
+                    <a class="navbar-item" href="/2017/08/03/list-of-tags/">
+                      <div class="navbar-content">
+                        <p>
+                          <small class="has-text-info">03 Aug 2017</small>
+                        </p>
+                        <p>New feature: list of tags</p>
+                      </div>
+                    </a>
                   </div>
+                  
                 </div>
               </div>
-            </div>
-           
-          </div>
 
-          <div class="navbar-end">
-               <div class="navbar-item has-dropdown is-hoverable">
-              <div class="navbar-link">More</div>
-              <div id="moreDropdown" class="navbar-dropdown">
-                <a class="navbar-item" href="http://bulma.io/extensions/">
+              <hr class="navbar-divider" />
+              <div class="navbar-item">
+                <div class="navbar-content">
                   <div class="level is-mobile">
                     <div class="level-left">
                       <div class="level-item">
-                        <p>
-                          <strong>Extensions</strong>
-                          <br />
-                          <small>Side projects to enhance Bulma</small>
-                        </p>
+                        <strong>Stay up to date!</strong>
                       </div>
                     </div>
                     <div class="level-right">
                       <div class="level-item">
-                        <span class="icon has-text-info">
-                          <i class="fa fa-plug"></i>
-                        </span>
+                        <a class="button bd-is-rss is-small" href="http://bulma.io/atom.xml">
+                          <span class="icon is-small">
+                            <i class="fa fa-rss"></i>
+                          </span>
+                          <span>Subscribe</span>
+                        </a>
                       </div>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
-            <a class="navbar-item" href="http://bulma.io/expo/">
-              <span class="bd-emoji">🎨</span> &nbsp;Expo
-            </a>
-            <a class="navbar-item" href="http://bulma.io/love/">
-              <span class="bd-emoji">❤️</span> &nbsp;Love
-            </a>
-            <a
-              class="navbar-item is-hidden-desktop-only"
-              href="https://github.com/jgthms/bulma"
-              target="_blank"
-            >
-              <span class="icon" style="color: #fff;">
-                <i class="fab fa-github"></i>
-              </span>
-            </a>
-            <a
-              class="navbar-item is-hidden-desktop-only"
-              href="https://twitter.com/jgthms"
-              target="_blank"
-            >
-              <span class="icon" style="color: #55acee;">
-                <i class="fab fa-twitter"></i>
-              </span>
-            </a>
-            <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
-                  <a
-                    class="bd-tw-button button"
-                    data-social-network="Twitter"
-                    data-social-action="tweet"
-                    data-social-target="http://bulma.io"
-                    target="_blank"
-                    href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms"
-                  >
-                    <span class="icon">
-                      <i class="fab fa-twitter"></i>
-                    </span>
-                    <span>Tweet</span>
-                  </a>
-                </p>
-                <p class="control">
-                  <a
-                    class="button is-primary"
-                    href="https://github.com/jgthms/bulma/archive/0.5.1.zip"
-                  >
-                    <span class="icon">
-                      <i class="fa fa-download"></i>
-                    </span>
-                    <span>Download</span>
-                  </a>
-                </p>
-              </div>
+          </div>-->
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-link">More</div>
+            <div id="moreDropdown" class="navbar-dropdown">
+              <a class="navbar-item" href="http://bulma.io/extensions/">
+                <div class="level is-mobile">
+                  <div class="level-left">
+                    <div class="level-item">
+                      <p>
+                        <strong>Extensions</strong>
+                        <br />
+                        <small>Side projects to enhance Bulma</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="level-right">
+                    <div class="level-item">
+                      <span class="icon has-text-info">
+                        <i class="fa fa-plug"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a class="navbar-item" href="http://bulma.io/expo/">
+            <span class="bd-emoji">🎨</span> &nbsp;Expo
+          </a>
+          <b-switch :value="true" type="is-info">Info</b-switch>
+          <a class="navbar-item" href="http://bulma.io/love/">
+            <span class="bd-emoji">❤️</span> &nbsp;Love
+          </a>
+          <a
+            class="navbar-item is-hidden-desktop-only"
+            href="https://github.com/jgthms/bulma"
+            target="_blank"
+          >
+            <span class="icon" style="color: #fff;">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          <a
+            class="navbar-item is-hidden-desktop-only"
+            href="https://twitter.com/jgthms"
+            target="_blank"
+          >
+            <span class="icon" style="color: #55acee;">
+              <i class="fab fa-twitter"></i>
+            </span>
+          </a>
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a
+                  class="bd-tw-button button"
+                  data-social-network="Twitter"
+                  data-social-action="tweet"
+                  data-social-target="http://bulma.io"
+                  target="_blank"
+                  href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms"
+                >
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Tweet</span>
+                </a>
+              </p>
+              <p class="control">
+                <a
+                  class="button is-primary"
+                  href="https://github.com/jgthms/bulma/archive/0.5.1.zip"
+                >
+                  <span class="icon">
+                    <i class="fa fa-download"></i>
+                  </span>
+                  <span>Download</span>
+                </a>
+              </p>
             </div>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
+  </div>
 </template>
 <script>
 export default {
@@ -262,15 +187,15 @@ export default {
   data() {
     return {
       scrollPosition: null
-    }
+    };
   },
   mounted() {
     // this.displayMenu()
-      window.addEventListener('scroll', this.updateScroll);
+    window.addEventListener("scroll", this.updateScroll);
   },
   methods: {
     updateScroll() {
-      this.scrollPosition = window.scrollY
+      this.scrollPosition = window.scrollY;
     },
     displayMenu() {
       // Get all "navbar-burger" elements

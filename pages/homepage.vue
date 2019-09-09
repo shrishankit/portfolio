@@ -168,26 +168,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-.bigbanner {
-  height: 100vh;
-  width: 100%;
-  background-color: antiquewhite;
-  position: absolute;
-  z-index: 999999;
-  /* display: none; */
-}
-
-.slide-fade-enter-active {
-  transition: all 0.3s ease-in-out;
-}
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  /* opacity: 0; */
-}
-</style>
