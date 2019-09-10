@@ -3,14 +3,19 @@
     <div class="column">
       <pre id="typewriter" class>
         <span class="var-highlight">TESTING TEXT CSS</span> 
-                Typewriter Style </pre>
+                Typewriter Style 
+                <span @change="backWord(mainString)">{{mainString}}</span>
+                </pre>
     </div>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      stringArry : [],
+      mainString : "Check This"
+    };
   },
   mounted() {
     this.initiatType();
@@ -83,6 +88,16 @@ export default {
       return {
         type: type
       };
+    },
+    backWord(inputString){
+      this.stringArry = inputString.split()
+      console.log("Array String",this.stringArry);
+      for (let i = 0; i < this.stringArry.length; i++) {
+        // const element = this.stringArry[i];
+        this.stringArry.pop()
+        this.mainString = this.stringArry.toString()
+      }
+      
     }
   }
 };
@@ -92,7 +107,7 @@ export default {
 
 .var-highlight {
   color: #c0ad60;
-  font-size: 20px;
+  font-size: 30px;
 }
 .string-highlight {
   color: rgba(253, 149, 90, 0.8);

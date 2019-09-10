@@ -4,7 +4,35 @@
       style="z-index: 99999999;"
       :class="[{newheader: scrollPosition < 10, altheader: scrollPosition > 10},{navbar:true}]"
     >
+    
       <div class="navbar-brand">
+          <div class="dropdown is-hoverable" style="padding: 0.5rem 0.75rem;">
+        <div class="dropdown-trigger centerimp">
+          <!-- <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                  <span>Hover me</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+          </button>-->
+          <figure class="image is-32x32" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" />
+          </figure>
+        </div>
+        <transition name="slide-left">
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu" style="left:5px;">
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <p>
+                  You can insert
+                  <strong>any type of content</strong> within the dropdown menu.
+                </p>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </div>
         <div class="navbar-burger burger" @click="displayMenu" data-target="navMenubd-example">
           <span></span>
           <span></span>
@@ -12,28 +40,44 @@
         </div>
       </div>
 
-      <div id="navMenubd-example" class="navbar-menu">
-        <div class="navbar-start">
-          <!-- <div class="navbar-item has-dropdown is-hoverable">
+      <transition name="slide-left">
+        <div id="navMenubd-example" class="navbar-menu" :class="[{'is-active':toggleActive}]">
+          <div class="navbar-start">
+            <!-- <b-switch :value="true" type="is-info">Info</b-switch> -->
+            <!-- <div class="navbar-link">More</div>
+                <div id="moreDropdown" class="navbar-dropdown">
+                  <a class="navbar-item" href="http://bulma.io/extensions/">
+                    <div class="level is-mobile">
+                      <div class="level-left">
+                        <div class="level-item">
+                          <p>
+                            <strong>Extensions</strong>
+                            <br />
+                            <small>Side projects to enhance Bulma</small>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <div class="level-item">
+                          <span class="icon has-text-info">
+                            <i class="fa fa-plug"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>-->
+
+            <!-- <div class="navbar-item has-dropdown is-hoverable">
             
             <div class="navbar-dropdown">
               
 
               <hr class="navbar-divider" />
-              <div class="navbar-item">
-                <div>
-                  <p class="is-size-6-desktop">
-                    <strong class="has-text-info">0.5.1</strong>
-                  </p>
-
-                  <small>
-                    <a class="bd-view-all-versions" href="/versions">View all versions</a>
-                  </small>
-                </div>
-              </div>
+             
             </div>
-          </div>-->
-          <!-- <div class="navbar-item has-dropdown is-hoverable is-mega">
+            </div>-->
+            <!-- <div class="navbar-item has-dropdown is-hoverable is-mega">
             
             <div id="blogDropdown" class="navbar-dropdown" data-style="width: 18rem;">
               <div class="is-fluid">
@@ -92,92 +136,65 @@
                 </div>
               </div>
             </div>
-          </div>-->
-        </div>
+            </div>-->
+          </div>
 
-        <div class="navbar-end">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <div class="navbar-link">More</div>
-            <div id="moreDropdown" class="navbar-dropdown">
-              <a class="navbar-item" href="http://bulma.io/extensions/">
-                <div class="level is-mobile">
-                  <div class="level-left">
-                    <div class="level-item">
-                      <p>
-                        <strong>Extensions</strong>
-                        <br />
-                        <small>Side projects to enhance Bulma</small>
-                      </p>
+          <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <!-- <div class="navbar-link">More</div>
+                <div id="moreDropdown" class="navbar-dropdown">
+                  <a class="navbar-item" href="http://bulma.io/extensions/">
+                    <div class="level is-mobile">
+                      <div class="level-left">
+                        <div class="level-item">
+                          <p>
+                            <strong>Extensions</strong>
+                            <br />
+                            <small>Side projects to enhance Bulma</small>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <div class="level-item">
+                          <span class="icon has-text-info">
+                            <i class="fa fa-plug"></i>
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="level-right">
-                    <div class="level-item">
-                      <span class="icon has-text-info">
-                        <i class="fa fa-plug"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
+                  </a>
+              </div>-->
             </div>
-          </div>
-          <a class="navbar-item" href="http://bulma.io/expo/">
-            <span class="bd-emoji">🎨</span> &nbsp;Expo
-          </a>
-          <b-switch :value="true" type="is-info">Info</b-switch>
-          <a class="navbar-item" href="http://bulma.io/love/">
-            <span class="bd-emoji">❤️</span> &nbsp;Love
-          </a>
-          <a
-            class="navbar-item is-hidden-desktop-only"
-            href="https://github.com/jgthms/bulma"
-            target="_blank"
-          >
-            <span class="icon" style="color: #fff;">
-              <i class="fab fa-github"></i>
-            </span>
-          </a>
-          <a
-            class="navbar-item is-hidden-desktop-only"
-            href="https://twitter.com/jgthms"
-            target="_blank"
-          >
-            <span class="icon" style="color: #55acee;">
-              <i class="fab fa-twitter"></i>
-            </span>
-          </a>
-          <div class="navbar-item">
-            <div class="field is-grouped">
-              <p class="control">
-                <a
-                  class="bd-tw-button button"
-                  data-social-network="Twitter"
-                  data-social-action="tweet"
-                  data-social-target="http://bulma.io"
-                  target="_blank"
-                  href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms"
-                >
-                  <span class="icon">
-                    <i class="fab fa-twitter"></i>
-                  </span>
-                  <span>Tweet</span>
-                </a>
-              </p>
-              <p class="control">
-                <a
-                  class="button is-primary"
-                  href="https://github.com/jgthms/bulma/archive/0.5.1.zip"
-                >
-                  <span class="icon">
-                    <i class="fa fa-download"></i>
-                  </span>
-                  <span>Download</span>
-                </a>
-              </p>
+
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="navbar-item" href="https://github.com/shrishankit">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </p>
+                <p class="control">
+                  <a class="button is-rounded">
+                    <i class="fas fa-adjust"></i>
+                  </a>
+                </p>
+
+                <p class="control">
+                  <a
+                    class="button is-primary is-rounded"
+                    href="https://github.com/jgthms/bulma/archive/0.5.1.zip"
+                  >
+                    <span class="icon">
+                      <i class="fa fa-download"></i>
+                    </span>
+                    <span>Download</span>
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </transition>
     </nav>
   </div>
 </template>
@@ -186,7 +203,9 @@ export default {
   components: {},
   data() {
     return {
-      scrollPosition: null
+      scrollPosition: null,
+      toggelSidebar: false,
+      toggleActive: false
     };
   },
   mounted() {
@@ -199,6 +218,7 @@ export default {
     },
     displayMenu() {
       // Get all "navbar-burger" elements
+      this.toggelSidebar = !this.toggelSidebar;
       var $navbarBurgers = Array.prototype.slice.call(
         document.querySelectorAll(".navbar-burger"),
         0
@@ -210,10 +230,13 @@ export default {
         // Add a click event on each of them
         $navbarBurgers.forEach(function($el) {
           // Get the target from the "data-target" attribute
+          console.log("THis is $el", $el);
+
           var target = $el.dataset.target;
           var $target = document.getElementById(target);
 
           // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+          // $el.toggleActive =  true;
           $el.classList.toggle("is-active");
           $target.classList.toggle("is-active");
         });

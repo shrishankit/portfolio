@@ -287,3 +287,19 @@ body {
     font-size: 2rem;
   }
 }
+
+
+.bigbanner {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--banner-color);
+  position: absolute;
+  z-index: 999999;
+  /* opacity: 0; */
+  /* display: none; */
+}
+
+.sidebar{
+  position: absolute;
+  height: 100vh;
+}

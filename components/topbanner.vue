@@ -2,23 +2,31 @@
   <div>
     <mainheader></mainheader>
     <transition name="slide-fade">
-      <div v-if="show" class="bigbanner" :class="[{'slideInUp':up}]">
-        <h1 class="title">Animation Test</h1>
-        <a class="button is-primary is-rounded" @click="moveBanner('up')">Rounded</a>
+      <div v-if="show" class="bigbanner">
+        <div class="" style="height:100%">
+          <h1 class="title">Animation Test</h1>
+          <a class="button is-primary is-rounded" @click="moveBanner('up')">Rounded</a>
+          <terminaleffect></terminaleffect>
+          <!-- <teffect2></teffect2> -->
+        </div>
       </div>
     </transition>
     <!-- Content Below Banner -->
     <div>
-        <a class="button is-primary is-rounded" @click="moveBanner('down')">Rounded</a>
+      <a class="button is-primary is-rounded" @click="moveBanner('down')">Rounded</a>
       <p>Test text</p>
     </div>
   </div>
 </template>
 <script>
 import mainheader from "../components/header";
+import terminaleffect from "../components/terminaleffect"
+import teffect2 from "../components/topimg"
 export default {
   components: {
-      mainheader
+    mainheader,
+    terminaleffect,
+    teffect2
   },
   data() {
     return {
@@ -46,10 +54,8 @@ export default {
     //     this.up = false;
     //   }
     //   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-
     //   console.log("Last Scrool", lastScrollTop);
     // });
-
     // window.addEventListener("scroll", this.updateScroll);
   },
   methods: {
@@ -79,5 +85,4 @@ export default {
 };
 </script>
 <style scoped>
-
 </style>
