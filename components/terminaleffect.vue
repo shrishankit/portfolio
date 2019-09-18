@@ -1,11 +1,9 @@
 <template>
-  <div class="columns">
+  <div class="columns is-gapless">
     <div class="column">
       <pre id="typewriter" class>
-        <span class="var-highlight">TESTING TEXT CSS</span> 
-                Typewriter Style 
-                <span @change="backWord(mainString)">{{mainString}}</span>
-                </pre>
+        <span class="var-highlight">SHRISH</span><span class="textstyle1"> ANKIT</span>
+        <span class="textstyle2">Full-Stack </span><span class="textstyle2" style="color:orange">Developer ;</span></pre>
     </div>
   </div>
 </template>
@@ -13,8 +11,8 @@
 export default {
   data() {
     return {
-      stringArry : [],
-      mainString : "Check This"
+      stringArry: [],
+      mainString: "Check This"
     };
   },
   mounted() {
@@ -89,15 +87,14 @@ export default {
         type: type
       };
     },
-    backWord(inputString){
-      this.stringArry = inputString.split()
-      console.log("Array String",this.stringArry);
+    backWord(inputString) {
+      this.stringArry = inputString.split();
+      console.log("Array String", this.stringArry);
       for (let i = 0; i < this.stringArry.length; i++) {
         // const element = this.stringArry[i];
-        this.stringArry.pop()
-        this.mainString = this.stringArry.toString()
+        this.stringArry.pop();
+        this.mainString = this.stringArry.toString();
       }
-      
     }
   }
 };
@@ -106,30 +103,41 @@ export default {
 @import url(https://fonts.googleapis.com/css?family=Khula:700);
 
 .var-highlight {
-  color: #c0ad60;
-  font-size: 30px;
+  color: #2dd1b2;
+  // font-size: 5rem;
+  font-size: calc(30px + (90 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
+.textstyle1{
+  font-size: calc(30px + (90 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+.textstyle2{
+  font-size: calc(24px + (35 - 14) * ((100vw - 300px) / (1600 - 300)));
+  margin-top:-30px;
+  }
 .string-highlight {
   color: rgba(253, 149, 90, 0.8);
 }
 
 #typewriter {
-  font-size: 18px;
+  // font-size: 18px;
+  // font-size: 40px;
   margin: 0;
-  font-family: "Courier New";
-
+  // font-family: "Courier New";
+  height: 400px;
   &:after {
+    // font-size: 40px;
     content: "_";
     animation: blink 500ms linear infinite alternate;
   }
 }
 
 .blinker {
-  font-size: 12px;
+  font-size: 20px;
   margin: 0;
   //   font-family: "Courier New";
 
   &:after {
+    
     content: "_";
     animation: blink 500ms linear infinite alternate;
   }

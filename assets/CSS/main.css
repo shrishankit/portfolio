@@ -1,4 +1,6 @@
 /* WRITE YOUR CSS HERE */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 :root {
   --primary-color: #302AE6;
   --secondary-color: #536390;
@@ -13,8 +15,8 @@
   --secondary-color: #818cab;
   --font-color: #e1e1ff;
   --bg-color: #161625;
-  --heading-color: #818cab;
-  --banner-color: #2a2929;
+  --heading-color: #0e0e0e;
+  --banner-color: #212020;
 }
 
 body {
@@ -278,15 +280,7 @@ body {
 .isbig {
   font-size: 5rem;
 }
-@media only screen and (max-width: 600px) {
-  .homepage {
-    background-repeat: no-repeat;
-    background-size: auto auto;
-  }
-  .myfonts {
-    font-size: 2rem;
-  }
-}
+
 
 
 .bigbanner {
@@ -302,4 +296,33 @@ body {
 .sidebar{
   position: absolute;
   height: 100vh;
+}
+
+.bannertextposition{
+  width: inherit;
+    position: absolute;
+    top: 17rem;
+    left: 26rem;
+}
+.typewriterposition{
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 12%;
+
+}
+
+pre{
+  font-family: 'Lato', sans-serif !important;
+  background-color: transparent !important;
+}
+
+@media only screen and (max-width: 400px) {
+
+  .typewriterposition{
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-top: 12%;
+  
+  }
+
 }

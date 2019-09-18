@@ -4,35 +4,34 @@
       style="z-index: 99999999;"
       :class="[{newheader: scrollPosition < 10, altheader: scrollPosition > 10},{navbar:true}]"
     >
-    
       <div class="navbar-brand">
-          <div class="dropdown is-hoverable" style="padding: 0.5rem 0.75rem;">
-        <div class="dropdown-trigger centerimp">
-          <!-- <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <div class="dropdown is-hoverable" style="padding: 0.5rem 0.75rem;">
+          <div class="dropdown-trigger centerimp">
+            <!-- <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
                   <span>Hover me</span>
                   <span class="icon is-small">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                   </span>
-          </button>-->
-          <figure class="image is-32x32" aria-haspopup="true" aria-controls="dropdown-menu4">
-            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" />
-          </figure>
-        </div>
-        <transition name="slide-left">
-          <div class="dropdown-menu" id="dropdown-menu4" role="menu" style="left:5px;">
-            <div class="dropdown-content">
-              <div class="dropdown-item">
-                <p>
-                  You can insert
-                  <strong>any type of content</strong> within the dropdown menu.
-                </p>
-                <hr class="dropdown-divider" />
-                <a href="#" class="dropdown-item">This is a link</a>
+            </button>-->
+            <figure class="image is-32x32" aria-haspopup="true" aria-controls="dropdown-menu4">
+              <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" />
+            </figure>
+          </div>
+          <transition name="slide-left">
+            <div class="dropdown-menu" id="dropdown-menu4" role="menu" style="left:5px;">
+              <div class="dropdown-content">
+                <div class="dropdown-item">
+                  <p>
+                    You can insert
+                    <strong>any type of content</strong> within the dropdown menu.
+                  </p>
+                  <hr class="dropdown-divider" />
+                  <a href="#" class="dropdown-item">This is a link</a>
+                </div>
               </div>
             </div>
-          </div>
-        </transition>
-      </div>
+          </transition>
+        </div>
         <div class="navbar-burger burger" @click="displayMenu" data-target="navMenubd-example">
           <span></span>
           <span></span>
@@ -174,12 +173,12 @@
                   </a>
                 </p>
                 <p class="control">
-                  <a class="button is-rounded">
+                  <a :class="{'is-info':checked}" class="button is-rounded" @click="changeTheme">
                     <i class="fas fa-adjust"></i>
                   </a>
                 </p>
 
-                <p class="control">
+                <!-- <p class="control">
                   <a
                     class="button is-primary is-rounded"
                     href="https://github.com/jgthms/bulma/archive/0.5.1.zip"
@@ -189,7 +188,7 @@
                     </span>
                     <span>Download</span>
                   </a>
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -205,7 +204,8 @@ export default {
     return {
       scrollPosition: null,
       toggelSidebar: false,
-      toggleActive: false
+      toggleActive: false,
+      checked: false
     };
   },
   mounted() {
@@ -215,6 +215,16 @@ export default {
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
+    },
+    changeTheme() {
+      this.checked = !this.checked;
+      if (this.checked) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      }
     },
     displayMenu() {
       // Get all "navbar-burger" elements

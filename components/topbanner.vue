@@ -3,11 +3,27 @@
     <mainheader></mainheader>
     <transition name="slide-fade">
       <div v-if="show" class="bigbanner">
-        <div class="" style="height:100%">
-          <h1 class="title">Animation Test</h1>
-          <a class="button is-primary is-rounded" @click="moveBanner('up')">Rounded</a>
-          <terminaleffect></terminaleffect>
+        <div class style="height:100%">
+          <!-- <h1 class="title">Animation Test</h1> -->
+
           <!-- <teffect2></teffect2> -->
+          <div class="columns is-gapless">
+            <div class="column">
+              <div class="">
+                <div class="typewriterposition">
+                  <terminaleffect></terminaleffect>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+          <div class="columns is-gapless">
+            <div class="column">
+              <div class="onend" style="padding-right: 188px;">
+                <a class="button is-primary is-rounded" @click="moveBanner('up')">Rounded</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </transition>
@@ -20,8 +36,8 @@
 </template>
 <script>
 import mainheader from "../components/header";
-import terminaleffect from "../components/terminaleffect"
-import teffect2 from "../components/topimg"
+import terminaleffect from "../components/terminaleffect";
+import teffect2 from "../components/topimg";
 export default {
   components: {
     mainheader,
@@ -32,33 +48,17 @@ export default {
     return {
       up: false,
       show: true,
-      scrollPosition: null
+      scrollPosition: null,
+      screenWidth : null,
+      screenHight : null
     };
   },
   mounted() {
-    // window.addEventListener("scroll", function() {
-    //   var lastScrollTop = 0;
-    //   // or window.addEventListener("scroll"....
-    //   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-    //   if (st > lastScrollTop) {
-    //     // downscroll code
-    //     console.log("in down", this.show);
-    //     if (lastScrollTop > 10) {
-    //       this.show = false;
-    //       this.up = true;
-    //       console.log("in down", this.show);
-    //     }
-    //   } else {
-    //     // upscroll code
-    //     // console.log("up up");
-    //     this.up = false;
-    //   }
-    //   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    //   console.log("Last Scrool", lastScrollTop);
-    // });
+    window.addEventListener("resize", this.changeButton);
     // window.addEventListener("scroll", this.updateScroll);
   },
   methods: {
+    
     moveBanner(direction) {
       switch (direction) {
         case "up":
@@ -80,6 +80,11 @@ export default {
       console.log(this);
       this.up = true;
       console.log(this.up);
+    },
+    changeButton:function(sizeEvent){
+      console.log("Wh",sizeEvent.target.innerWidth,sizeEvent.target.innerHeight);
+      this.screenWidth = sizeEvent.target.innerWidth
+      this.screenHight = sizeEvent.target.innerHeight
     }
   }
 };
