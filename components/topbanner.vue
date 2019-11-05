@@ -2,21 +2,23 @@
   <div>
     <mainheader></mainheader>
     <transition name="slide-fade">
+      <!-- Main Content of home page -->
+
       <div v-if="show" class="bigbanner">
         <div class style="height:100%">
-          <!-- <h1 class="title">Animation Test</h1> -->
-
-          <!-- <teffect2></teffect2> -->
           <div class="columns is-gapless">
             <div class="column">
-              <div class="">
+              <div class>
                 <div class="typewriterposition">
                   <terminaleffect></terminaleffect>
                 </div>
               </div>
             </div>
+            <div class="column">
+              <progchart></progchart>
+            </div>
           </div>
-           
+
           <div class="columns is-gapless">
             <div class="column">
               <div class="onend" style="padding-right: 188px;">
@@ -38,19 +40,21 @@
 import mainheader from "../components/header";
 import terminaleffect from "../components/terminaleffect";
 import teffect2 from "../components/topimg";
+import progchart from "../components/charts/prog"
 export default {
   components: {
     mainheader,
     terminaleffect,
-    teffect2
+    teffect2,
+    progchart
   },
   data() {
     return {
       up: false,
       show: true,
       scrollPosition: null,
-      screenWidth : null,
-      screenHight : null
+      screenWidth: null,
+      screenHight: null
     };
   },
   mounted() {
@@ -58,7 +62,6 @@ export default {
     // window.addEventListener("scroll", this.updateScroll);
   },
   methods: {
-    
     moveBanner(direction) {
       switch (direction) {
         case "up":
@@ -81,10 +84,14 @@ export default {
       this.up = true;
       console.log(this.up);
     },
-    changeButton:function(sizeEvent){
-      console.log("Wh",sizeEvent.target.innerWidth,sizeEvent.target.innerHeight);
-      this.screenWidth = sizeEvent.target.innerWidth
-      this.screenHight = sizeEvent.target.innerHeight
+    changeButton: function(sizeEvent) {
+      console.log(
+        "Wh",
+        sizeEvent.target.innerWidth,
+        sizeEvent.target.innerHeight
+      );
+      this.screenWidth = sizeEvent.target.innerWidth;
+      this.screenHight = sizeEvent.target.innerHeight;
     }
   }
 };

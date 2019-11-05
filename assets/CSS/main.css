@@ -326,3 +326,15 @@ pre{
   }
 
 }
+
+
+@media screen and (min-width: 1088px){
+.is-tooltip-bottom-desktop::before {
+    top: 100%!important;
+    bottom: auto!important;
+    left: -287% !important;
+    right: 20%!important;
+    -webkit-transform: translate(-50%,-1rem)!important;
+    transform: translate(-50%,-1rem)!important;
+}
+}

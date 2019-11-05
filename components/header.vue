@@ -173,7 +173,7 @@
                   </a>
                 </p>
                 <p class="control">
-                  <a :class="{'is-info':checked}" class="button is-rounded" @click="changeTheme">
+                  <a :class="{'is-info':checked}" class="button is-rounded tooltip is-tooltip-left is-flex-mobile is-tooltip-multiline" data-tooltip="Tooltip with a long Text. So we use is-tooltip-multiline modifier to force multiline display." @click="changeTheme">
                     <i class="fas fa-adjust"></i>
                   </a>
                 </p>
