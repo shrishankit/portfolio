@@ -211,6 +211,7 @@ export default {
   mounted() {
     // this.displayMenu()
     window.addEventListener("scroll", this.updateScroll);
+    this.changeTheme();
   },
   methods: {
     updateScroll() {

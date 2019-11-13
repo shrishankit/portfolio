@@ -338,3 +338,25 @@ pre{
     transform: translate(-50%,-1rem)!important;
 }
 }
+
+.layertop{
+  /* width:300px;  */
+  /* height:100px;  */
+  position:relative; 
+  top:-60px; 
+  left:35px; 
+  z-index:1;
+}
+
+.layerbottom{
+  width: 51%;
+  /* height: 12%; */
+  position: relative;
+  top: -27rem;
+  left: 55rem;
+  z-index: 0;
+}
+
+.textshadow{
+  text-shadow: 3px 1px 3px rgba(150, 150, 150, 1);
+}

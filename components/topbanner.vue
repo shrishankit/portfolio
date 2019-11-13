@@ -5,9 +5,9 @@
       <!-- Main Content of home page -->
 
       <div v-if="show" class="bigbanner">
-        <div class style="height:100%">
-          <div class="columns is-gapless">
-            <div class="column">
+        <!-- style="height:100%" -->
+        <!-- <div class="columns is-gapless"> -->
+        <!-- <div class="column">
               <div class>
                 <div class="typewriterposition">
                   <terminaleffect></terminaleffect>
@@ -16,14 +16,22 @@
             </div>
             <div class="column">
               <progchart></progchart>
-            </div>
+            </div> -->
+        <div class="layertop">
+          <div class="typewriterposition">
+            <terminaleffect></terminaleffect>
           </div>
+        </div>
+        <div class="layerbottom">
+          <progchart></progchart>
+        </div>
 
-          <div class="columns is-gapless">
-            <div class="column">
-              <div class="onend" style="padding-right: 188px;">
-                <a class="button is-primary is-rounded" @click="moveBanner('up')">Rounded</a>
-              </div>
+        <div class="columns is-gapless">
+          <div class="column">
+            <div class="onend" style="padding-right: 188px;">
+              <a class="button is-primary is-rounded" @click="moveBanner('up')"
+                >Rounded</a
+              >
             </div>
           </div>
         </div>
@@ -31,7 +39,9 @@
     </transition>
     <!-- Content Below Banner -->
     <div>
-      <a class="button is-primary is-rounded" @click="moveBanner('down')">Rounded</a>
+      <a class="button is-primary is-rounded" @click="moveBanner('down')"
+        >Rounded</a
+      >
       <p>Test text</p>
     </div>
   </div>
@@ -40,7 +50,7 @@
 import mainheader from "../components/header";
 import terminaleffect from "../components/terminaleffect";
 import teffect2 from "../components/topimg";
-import progchart from "../components/charts/prog"
+import progchart from "../components/charts/prog";
 export default {
   components: {
     mainheader,
@@ -96,5 +106,4 @@ export default {
   }
 };
 </script>
-<style scoped>
-</style>
+<style scoped></style>
