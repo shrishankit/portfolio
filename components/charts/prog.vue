@@ -1,7 +1,7 @@
 <template>
-<!--  -->
-  <div style="width: 46rem;height: 3rem;">
-    <div style="width: 100%;height: 27rem;" id="progchart"></div>
+  <!--  -->
+  <div style="">
+    <div class="" style="" id="progchart"></div>
   </div>
 </template>
 <script>
@@ -97,3 +97,10 @@ export default {
   }
 };
 </script>
+<style scoped>
+#progchart {
+  width: 42rem;
+  left: -10%;
+  height: calc(254px + (90 - 14) * ((100vw - 303px) / (1600 - 300)));
+}
+</style>

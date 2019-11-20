@@ -1,41 +1,139 @@
-
 .navbar-item.is-mega {
-    position: static;
-  
-    .is-mega-menu-title {
-      margin-bottom: 0;
-      padding: .375rem 1rem;
+  position: static;
+
+  .is-mega-menu-title {
+    margin-bottom: 0;
+    padding: 0.375rem 1rem;
+  }
+}
+
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+.buttonStyle1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+
+  // background: url(https://images.unsplash.com/photo-1538964173425-93884d739596?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e2f0390d79969aaf31e155bd1f7138b0&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb) center center no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+  display: block;
+  span {
+    transition: all 0.6s ease;
+    overflow: hidden;
+    font-size: 62px;
+    font-weight: 800;
+    font-family: sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -50px;
+      left: -60px;
+      width: 90px;
+      height: 90px;
+      background: #000;
+      z-index: -1;
+      box-shadow: 0px 0px 120px #024768, 0px 0px 120px #04b0bc,
+        0px 0px 120px #33c9c7, 0px 0px 120px #94dfdd, 0px 0px 120px #97d3d3;
+      transition: all 0.3s ease;
+      transform: rotate(-45deg);
+    }
+    &:hover::after {
+      box-shadow: 40px -20px 0px #024768, 41px -20px 8px rgba(0, 0, 0, 0.3),
+        80px 20px 0px #04b0bc, 81px 20px 8px rgba(0, 0, 0, 0.3),
+        120px 60px 0px #22cbcb, 121px 60px 8px rgba(0, 0, 0, 0.3),
+        160px 100px 0px #94dfdd, 161px 100px 8px rgba(0, 0, 0, 0.3),
+        200px 120px 0px #97d3d3;
+    }
+    &:hover {
+      box-shadow: 4px 34px 24px rgba(0, 0, 0, 0.3);
     }
   }
+}
 
-  $purple: #8A4D76;
-  $pink: #FA7C91;
-  $brown: #757763;
-  $beige-light: #D0D1CD;
-  $beige-lighter: #EFF0EB;
+.btn {
+  display: inline-block;
+  color: white;
+  min-width: 154px;
+  text-decoration: none;
+  margin-right: 50px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
   
-  // Update Bulma's global variables
-  $family-sans-serif: "Nunito", sans-serif;
-  $grey-dark: $brown;
-  $grey-light: $beige-light;
-  $primary: $purple;
-  $link: $pink;
-  $widescreen-enabled: false;
-  $fullhd-enabled: false;
+    &:hover {
+      color: #fafafa !important;
+      font-size: small !important;
+    }
   
-  // Update some of Bulma's component variables
-  $body-background-color: $beige-lighter;
-  $control-border-width: 2px;
-  $input-border-color: transparent;
-  $input-shadow: none;
-  
-  // Import only what you need from Bulma
-  @import "../../node_modules/bulma/sass/utilities/_all.sass";
-  @import "../../node_modules/bulma/sass/base/_all.sass";
-  @import "../../node_modules/bulma/sass/elements/button.sass";
-  @import "../../node_modules/bulma/sass/elements/container.sass";
-  @import "../../node_modules/bulma/sass/elements/title.sass";
-  @import "../../node_modules/bulma/sass/form/_all.sass";
-  @import "../../node_modules/bulma/sass/components/navbar.sass";
-  @import "../../node_modules/bulma/sass/layout/hero.sass";
-  @import "../../node_modules/bulma/sass/layout/section.sass";
+  &:hover {
+    .button-stroke:nth-child(2) {
+      stroke-dashoffset: 0;
+      color: #fafafa !important;
+      font-size: small !important;
+    }
+  }
+}
+
+.button-stroke {
+  display: block;
+  width: calc(100% - 40px);
+  height: 20px;
+  stroke: #fba500;
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+  stroke-width: 4;
+
+  &:nth-child(2) {
+    stroke-dasharray: 650px;
+    stroke-dashoffset: 650px;
+    stroke: #2dd1b2;
+
+    stroke-width: 5;
+    transition: stroke-dashoffset 800ms ease-out;
+  }
+}
+
+// Import only what you need from Bulma
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/elements/button.sass";
+@import "../../node_modules/bulma/sass/elements/container.sass";
+@import "../../node_modules/bulma/sass/elements/title.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../node_modules/bulma/sass/layout/section.sass";

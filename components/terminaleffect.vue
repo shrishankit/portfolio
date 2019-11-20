@@ -1,10 +1,8 @@
 <template>
-  <div class="columns is-gapless">
-    <div class="column">
-      <pre id="typewriter" class>
+  <div>
+    <pre id="typewriter" class>
         <span class="var-highlight">SHRISH</span><span class="textstyle1"> ANKIT</span>
         <span class="textstyle2">Full-Stack </span><span class="textstyle2" style="color:orange">Developer ;</span></pre>
-    </div>
   </div>
 </template>
 <script>
@@ -107,13 +105,13 @@ export default {
   // font-size: 5rem;
   font-size: calc(30px + (90 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
-.textstyle1{
+.textstyle1 {
   font-size: calc(30px + (90 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
-.textstyle2{
+.textstyle2 {
   font-size: calc(24px + (35 - 14) * ((100vw - 300px) / (1600 - 300)));
-  margin-top:-30px;
-  }
+  margin-top: -30px;
+}
 .string-highlight {
   color: rgba(253, 149, 90, 0.8);
 }
@@ -121,9 +119,9 @@ export default {
 #typewriter {
   // font-size: 18px;
   // font-size: 40px;
-  margin: 0;
-  // font-family: "Courier New";
-  height: 400px;
+    margin: 0;
+    height: 345px;
+    margin-left: 10%;
   &:after {
     // font-size: 40px;
     content: "_";
@@ -137,7 +135,6 @@ export default {
   //   font-family: "Courier New";
 
   &:after {
-    
     content: "_";
     animation: blink 500ms linear infinite alternate;
   }

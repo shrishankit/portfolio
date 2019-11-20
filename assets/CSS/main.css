@@ -343,20 +343,21 @@ pre{
   /* width:300px;  */
   /* height:100px;  */
   position:relative; 
-  top:-60px; 
-  left:35px; 
+  top: 5rem;
+  left: 11rem;
   z-index:1;
 }
 
 .layerbottom{
-  width: 51%;
+  /* width: 51%; */
   /* height: 12%; */
   position: relative;
-  top: -27rem;
-  left: 55rem;
+  top: -9rem;
+  left: 52rem;
   z-index: 0;
 }
 
 .textshadow{
   text-shadow: 3px 1px 3px rgba(150, 150, 150, 1);
 }
+
