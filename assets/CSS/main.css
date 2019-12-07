@@ -360,4 +360,6 @@ pre{
 .textshadow{
   text-shadow: 3px 1px 3px rgba(150, 150, 150, 1);
 }
-
+.greybackground{
+  background-color: var(--banner-color);
+}

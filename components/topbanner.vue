@@ -1,6 +1,5 @@
 <template>
   <div>
-   
     <mainheader></mainheader>
     <transition name="slide-fade">
       <!-- Main Content of home page -->
@@ -33,12 +32,24 @@
               <!-- <div class="buttonStyle1">
                 <span @click="moveBanner('up')">Rounded</span>
               </div> -->
-               <svg id="stroke" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
-	<defs>
-		<path id="line" d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
-	</defs>
-</svg>
-              <a class="btn"   @click="moveBanner('up')"
+              <svg
+                id="stroke"
+                xmlns="http://www.w3.org/2000/svg"
+                width="0"
+                height="0"
+              >
+                <defs>
+                  <path
+                    id="line"
+                    d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    vector-effect="non-scaling-stroke"
+                  />
+                </defs>
+              </svg>
+              <a class="btn" @click="moveBanner('up')"
                 >U Know Where to Click!
                 <svg class="button-stroke" viewBox="0 0 154 13">
                   <use href="#line"></use>
@@ -53,11 +64,11 @@
       </div>
     </transition>
     <!-- Content Below Banner -->
-    <div>
+    <div class="greybackground">
       <span class="button is-primary is-rounded" @click="moveBanner('down')"
         >Rounded</span
       >
-      <p>Test text</p>
+      <timeline></timeline>
     </div>
   </div>
 </template>
@@ -66,12 +77,14 @@ import mainheader from "../components/header";
 import terminaleffect from "../components/terminaleffect";
 import teffect2 from "../components/topimg";
 import progchart from "../components/charts/prog";
+import timeline from "../components/charts/timeline"
 export default {
   components: {
     mainheader,
     terminaleffect,
     teffect2,
-    progchart
+    progchart,
+    timeline
   },
   data() {
     return {
@@ -121,4 +134,5 @@ export default {
   }
 };
 </script>
-<style scoped></style>
+<style scoped>
+</style>
