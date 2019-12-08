@@ -63,15 +63,17 @@ export default {
         chart.dataFields.dateX = "year";
         // chart.dataFields.categoryY = "category";
 
-        chart.dateFormatter.inputDateFormat = "yyyy";
-        // chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
-        // chart.dateFormatter.dateFormat = "yyyy";
-
+        // chart.dateFormatter.inputDateFormat = "yyyy";
+        chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+        chart.dateFormatter.dateFormat = "yyyy";
+        
+        // the color line depends up "end" and "start" parameter of the chart dataa
+        // if ypu want 2nd level of the line the give the value in category
         chart.data = [
           {
             category: "",
             start: "2012-03-10",
-            end: "2012-06-10",
+            end: "2014-03-10",
             color: colorSet.getIndex(4),
             icon: alarm,
             text: "High School"
@@ -79,7 +81,7 @@ export default {
           {
             category: "",
             start: "2014-03-10",
-            end: "2014-12-10",
+            end: "2018-03-10",
             color: colorSet.getIndex(3),
             icon: water,
             text: "Senior High School"
@@ -87,15 +89,23 @@ export default {
           {
             category: "",
             start: "2018-03-10",
-            end: "2018-03-12",
+            end: "2020-01-10",
             color: colorSet.getIndex(2),
             icon: exercise,
             text: "Some How Engineer"
           },
+          // {
+          //   category: "",
+          //   start: "2018-10-10 ",
+          //   end: "2020-01-10",
+          //   color: colorSet.getIndex(1),
+          //   icon: breakfast,
+          //   text: "Working As FullStack"
+          // },
           {
-            category: "",
-            start: "2020-01-10 ",
-            end: "2020-01-10",
+            category: "e",
+            start: "2018-10-10 ",
+            end: new Date(),
             color: colorSet.getIndex(1),
             icon: breakfast,
             text: "Working As FullStack"
@@ -121,7 +131,7 @@ export default {
         dateAxis.renderer.autoCenter = false;
         dateAxis.renderer.minGridDistance = 70;
         // dateAxis.baseInterval = { count: 5, timeUnit: "minute" };
-        dateAxis.baseInterval = { period: "year", count: 1 };
+        dateAxis.baseInterval = { period: "month", count: 10 };
         dateAxis.renderer.tooltipLocation = 0;
         dateAxis.renderer.line.strokeDasharray = "1,4";
         dateAxis.renderer.line.strokeOpacity = 0.5;
@@ -229,7 +239,7 @@ export default {
         chart.events.on("inited", function() {
           setTimeout(function() {
             hoverItem(series.dataItems.getIndex(0));
-          }, 2000);
+          }, 2000); // intial delay to start the tooltip
         });
 
         function hoverItem(dataItem) {
@@ -251,7 +261,7 @@ export default {
           }
           setTimeout(function() {
             hoverItem(series.dataItems.getIndex(index + 1));
-          }, 1000);
+          }, 3000); // this is the delay time at each bullet 
         }
       });
 
