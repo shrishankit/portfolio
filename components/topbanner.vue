@@ -64,10 +64,17 @@
       </div>
     </transition>
     <!-- Content Below Banner -->
-    <div class="greybackground">
-      <span class="button is-primary is-rounded" @click="moveBanner('down')"
-        >Rounded</span
-      >
+    <div class="greybackground" style="height:100vh">
+      <div class="column"><span style="padding: 14px 15px;" class="" @click="moveBanner('down')"
+        ><i class="fas fa-chevron-left fa-3x"></i></span></div>
+        <div class="aboutme">
+          <span class="firsttext title is-1">ABOUT</span>&nbsp;<span class="secondtext subtitle is-3">ME</span>
+          <br/>
+          <br/>
+          <p class="intro">I'm the co-founder of Gruntwork, a company that helps startups get up and running on AWS with DevOps 
+            best practices and world-class infrastructure. Our mission is to make it an order of magnitude easier 
+            to understand, develop, and deploy software. We take care of all the "undifferentiated heavy lifting"—the grunt work—so that your team can focus on the products and services unique to your company.</p>
+        </div>
       <timeline></timeline>
     </div>
   </div>

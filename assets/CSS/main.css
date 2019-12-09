@@ -363,3 +363,24 @@ pre{
 .greybackground{
   background-color: var(--banner-color);
 }
+
+.firsttext{
+  color: #2dd1b2 !important;
+}
+
+.secondtext{
+  color: #4a4a4a !important;
+}
+
+.aboutme{
+  position: absolute;
+  height: 18em;
+  width: 45em;
+  left: 161px;
+  top: 210px;
+}
+
+.intro{
+  color: wheat;
+  font-size: large;
+}
