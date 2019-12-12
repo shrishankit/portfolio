@@ -384,3 +384,13 @@ pre{
   color: wheat;
   font-size: large;
 }
+
+.timelinebutton{
+  height: 18rem;
+    /* top: 49px; */
+    margin-top: 87px;
+}
+
+.timelinebuttomloc{
+  margin-right: 140px;
+}

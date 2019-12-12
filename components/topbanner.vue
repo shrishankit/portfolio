@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mainheader></mainheader>
+    <!-- <mainheader></mainheader> -->
     <transition name="slide-fade">
       <!-- Main Content of home page -->
 
@@ -76,6 +76,37 @@
             to understand, develop, and deploy software. We take care of all the "undifferentiated heavy lifting"—the grunt work—so that your team can focus on the products and services unique to your company.</p>
         </div>
       <timeline></timeline>
+      <div class="timelinebutton">
+         <div class="onend timelinebuttomloc">
+        <svg
+                id="stroke"
+                xmlns="http://www.w3.org/2000/svg"
+                width="0"
+                height="0"
+              >
+                <defs>
+                  <path
+                    id="linenew"
+                    d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    vector-effect="non-scaling-stroke"
+                  />
+                </defs>
+              </svg>
+              <nuxt-link class="btn" to="/maindetails"
+                >Details...
+                <svg class="button-stroke" viewBox="0 0 154 13">
+                  <use href="#linenew"></use>
+                </svg>
+                <svg class="button-stroke" viewBox="0 0 154 13">
+                  <use href="#linenew"></use>
+                </svg>
+              </nuxt-link>
+      </div>
+      </div>
+     
     </div>
   </div>
 </template>
