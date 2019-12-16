@@ -1,10 +1,49 @@
 <template>
-    <div class="greybackground">
-        Details....
+  <div class="greybackground" style="height:100vh">
+    <div class="exprience">
+      <div class="aboutme">
+        <span class="firsttext title is-1">Experience</span>
+        <br />
+        <br />
+        <p class="intro textwhite">
+          I'm the co-founder of Gruntwork, a company that helps startups get up
+          and running on AWS with DevOps best practices and world-class
+          infrastructure. Our mission is to make it an order of magnitude easier
+          to understand, develop, and deploy software. We take care of all the
+          "undifferentiated heavy lifting"—the grunt work—so that your team can
+          focus on the products and services unique to your company.
+        </p>
+      </div>
+      <div class="onend">
+        <div class="progbargroup">
+          <progbar
+            v-for="(item, index) in langs"
+            :key="index"
+            :lang="item.langname"
+            :score="item.score"
+          ></progbar>
+        </div>
+      </div>
     </div>
+  </div>    
 </template>
 <script>
+import progbar from "../components/progbar";
 export default {
-    
-}
+  components: {
+    progbar
+  },
+  data() {
+    return {
+      //   langs: ["Golang", "JavaScript", "TypeScript", "HTML", "CSS"],
+      langs: [
+        { langname: "Golang", score: "63" },
+        { langname: "JavaScript", score: "90" },
+        { langname: "TypeScript", score: "34" },
+        { langname: "HTML", score: "88" },
+        { langname: "CSS", score: "65" }
+      ]
+    };
+  }
+};
 </script>

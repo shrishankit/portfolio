@@ -394,3 +394,24 @@ pre{
 .timelinebuttomloc{
   margin-right: 140px;
 }
+
+.progbar{
+  /* width: 20%; */
+  margin-bottom: 30px;
+
+}
+
+.progbartitle{
+  margin-top: 9px;
+}
+
+.progbargroup{
+  width: 20%;
+  padding: 20px 50px;
+  margin-right: 15rem;
+  margin-top: 26rem;
+}
+
+.textwhite{
+  color: white;
+}
