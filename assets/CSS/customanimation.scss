@@ -1,0 +1,25 @@
+$total-items: 5;
+
+
+  // Set delay per List Item
+  @for $i from 1 through $total-items {
+    li:nth-child(#{$i}) {
+      animation-delay: .25s * $i;
+    }
+  }
+  
+  // Keyframe animation
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+        right: 100px;
+    }
+    75% {
+      opacity: 0.5;
+      right: 0px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

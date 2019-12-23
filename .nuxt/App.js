@@ -12,6 +12,10 @@ import '../node_modules/bulma-extensions/dist/css/bulma-extensions.min.css'
 
 import '../assets/CSS/style.scss'
 
+import '../assets/CSS/customanimation.scss'
+
+import '../assets/CSS/custom.scss'
+
 import '../assets/CSS/quate.css'
 
 import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css'

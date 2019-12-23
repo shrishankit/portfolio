@@ -95,7 +95,7 @@
                   />
                 </defs>
               </svg>
-              <nuxt-link class="btn" to="/maindetails"
+              <nuxt-link @click="initiateProsses()" class="btn" to="/maindetails"
                 >Details...
                 <svg class="button-stroke" viewBox="0 0 154 13">
                   <use href="#linenew"></use>
@@ -126,6 +126,7 @@ export default {
   },
   data() {
     return {
+      display:true,
       up: false,
       show: true,
       scrollPosition: null,
@@ -168,6 +169,9 @@ export default {
       );
       this.screenWidth = sizeEvent.target.innerWidth;
       this.screenHight = sizeEvent.target.innerHeight;
+    },
+    initiateProsses(){
+      this.$nuxt.$emit("STAG_ANIMATE",this.display)
     }
   }
 };

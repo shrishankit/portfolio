@@ -1,7 +1,7 @@
 
 
 .slide-fade-enter-active {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .slide-fade-leave-active {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
@@ -28,3 +28,54 @@
   /* opacity: 1; */
 }
 
+.slideinfromleft-enter-active {
+  position: relative;
+  display: block;
+  /* // border: 1px solid hotpink; */
+  margin-bottom: 5px;
+  padding: 10px;
+  /* // text-align: center; */
+  /* // text-transform: uppercase; */
+  /* // transform: translate3d(100%, 0, 0); */
+  animation: fadeIn 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.slideinfromleft-leave-active {
+  position: relative;
+  display: block;
+  /* // border: 1px solid hotpink; */
+  margin-bottom: 5px;
+  padding: 10px;
+  /* // text-align: center; */
+  /* // text-transform: uppercase; */
+  /* // transform: translate3d(100%, 0, 0); */
+  animation: fadeIn 0.5s reverse;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+      right: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    right: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(30px);
+}

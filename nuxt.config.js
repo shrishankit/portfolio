@@ -29,6 +29,8 @@ export default {
     './assets/CSS/animation.css',
     './node_modules/bulma-extensions/dist/css/bulma-extensions.min.css',
     './assets/CSS/style.scss',
+    './assets/CSS/customanimation.scss',
+    './assets/CSS/custom.scss',
     './assets/CSS/quate.css',
     './node_modules/@fortawesome/fontawesome-free/css/all.min.css'
     ],
@@ -36,6 +38,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    './plugins/vue2-transition.js'
   ],
   /*
    ** Nuxt.js modules
